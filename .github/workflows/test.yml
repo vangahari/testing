@@ -1,0 +1,12 @@
+name: testing the env variables
+
+on:
+  push:
+    branches:
+      - '**'
+jobs:
+  testing_variables:
+  runs-on: ubuntu-latest
+  steps:
+    -name: print the env variables
+     run: echo $GITHUB_REF_NAME 
