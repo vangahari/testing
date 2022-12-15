@@ -8,7 +8,11 @@ jobs:
   testing_variables:
     runs-on: ubuntu-latest
     steps:
-     - name: print the env variables
+     - name: print GITHUB_REF_NAME
        run: echo $GITHUB_REF_NAME >> hari.txt
+       
+     - name: print GITHUB_HEAD_REF
+       run: echo $GITHUB_HEAD_REF >> hari.txt
+       
      - name: cat file
        run: cat hari.txt
