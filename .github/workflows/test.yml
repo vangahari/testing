@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: print the env variables
-       run: echo $GITHUB_REF_NAME 
+       run: echo $GITHUB_REF_NAME >> hari.txt
+     - name: cat file
+       run: cat hari.txt
