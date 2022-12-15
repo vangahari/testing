@@ -17,7 +17,4 @@ jobs:
      - name: add data
        run: echo "GIT_BRANCH=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_ENV
      - name: print GITHUB_ENV
-       run: echo $GITHUB_ENV >> hari.txt
-       
-     - name: cat file
-       run: cat hari.txt
+       run: echo "${{ env.GIT_BRANCH }}"
