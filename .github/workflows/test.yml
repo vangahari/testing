@@ -1,9 +1,9 @@
 name: testing the env variables
 
 on:
-  push:
-    branches:
-      - '**'
+#   push:
+#     branches:
+#       - '**'
   pull_request:
     types:
       - opened
