@@ -4,6 +4,12 @@ on:
   push:
     branches:
       - '**'
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
 jobs:
   testing_variables:
     runs-on: ubuntu-latest
