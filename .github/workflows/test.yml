@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: add data
-       run: echo "Hello hari" >> $GITHUB_ENV
+       run: echo "GIT_BRANCH=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_ENV
      - name: print GITHUB_ENV
        run: echo $GITHUB_ENV >> hari.txt
        
