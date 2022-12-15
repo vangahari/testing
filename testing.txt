@@ -2,4 +2,4 @@ testing:
 
 Github
 
-GITHUB_REF_NAME: 
+GITHUB_REF_NAME: name of the branch
