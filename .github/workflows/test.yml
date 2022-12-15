@@ -20,3 +20,5 @@ jobs:
        run: echo "${{ env.GIT_BRANCH }}"
      - name: echo GITHUB_REF
        run: echo $GITHUB_REF
+     - name: echo GITHUB_SHA
+       run: echo $GITHUB_SHA
