@@ -14,7 +14,8 @@ jobs:
   testing_variables:
     runs-on: ubuntu-latest
     steps:
-       
+     - name: add data
+       run: echo "Hello hari" >> $GITHUB_ENV
      - name: print GITHUB_ENV
        run: echo $GITHUB_ENV >> hari.txt
        
