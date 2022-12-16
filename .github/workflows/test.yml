@@ -17,10 +17,14 @@ on:
         description: 'Enter any value to skip tests'
         required: false
         default: ''
+      print_tags:
+        description: 'True to print to STDOUT'
+        required: true 
+        type: boolean 
 jobs:
   testing_variables:
     runs-on: ubuntu-latest
-    if: ${{ github.event.inputs.skip_test == 'true' }}
+    if:  ${{ inputs.print_tags }} 
     steps:
      - name: add data
        run: echo "GIT_BRANCH=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_ENV
