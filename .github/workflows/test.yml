@@ -15,7 +15,7 @@ on:
     inputs:
       skip_test:
         description: 'Enter any value to skip tests'
-        required: true
+        required: false
         default: 'fail'
 jobs:
   testing_variables:
