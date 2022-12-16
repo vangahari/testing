@@ -16,7 +16,7 @@ on:
       skip_test:
         description: 'Enter any value to skip tests'
         required: false
-        default: ''
+        default: 'no'
 jobs:
   testing_variables:
     runs-on: ubuntu-latest
