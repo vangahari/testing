@@ -19,7 +19,7 @@ on:
         default: ''
       print_tags:
         description: 'True to print to STDOUT'
-        required: '' 
+        required: false
         type: boolean 
 jobs:
   testing_variables:
