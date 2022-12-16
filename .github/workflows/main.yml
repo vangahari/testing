@@ -3,13 +3,24 @@ name: manual testing
 on: 
   workflow_dispatch:
     inputs:
-       commit_sha:
+      commit_sha:
           description: 'provide the last commit sha to rollback'
           required: true 
           type: string
           default: ''
+      skip_job:
+        description: 'Enter value to skip the tests'
+        required: false
+        type: string
+        default: ''
 jobs:
   job1:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.skip_test == '' }}
+    steps:
+      - name: first step
+        run: echo ${{ github.event.inputs.commit_sha }}
+  job2:
     runs-on: ubuntu-latest
     steps:
       - name: first step
