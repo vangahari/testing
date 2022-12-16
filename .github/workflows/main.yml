@@ -1,0 +1,14 @@
+name: manual testing
+
+on: 
+  workflow_dispatch
+  
+  
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first step
+        run: echo hari
+  
+
