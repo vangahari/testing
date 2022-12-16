@@ -10,9 +10,17 @@ on:
       - reopened
       - synchronize
       - closed
+
+  workflow_dispatch:
+    inputs:
+      skip_test:
+        description: 'Enter any value to skip tests'
+        required: false
+        default: ''
 jobs:
   testing_variables:
     runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.skip_test == '' }}
     steps:
      - name: add data
        run: echo "GIT_BRANCH=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_ENV
