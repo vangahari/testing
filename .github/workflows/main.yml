@@ -16,7 +16,7 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
-    if: ${{ github.event.inputs.skip_test == '' }}
+    if: ${{ github.event.inputs.skip_job == '' }}
     steps:
       - name: first step
         run: echo ${{ github.event.inputs.commit_sha }}
