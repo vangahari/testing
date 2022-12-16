@@ -15,7 +15,7 @@ on:
     inputs:
       skip_test:
         description: 'Enter any value to skip tests'
-        required: false
+        required: true
         default: ''
       print_tags:
         description: 'True to print to STDOUT'
