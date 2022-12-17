@@ -53,6 +53,14 @@ jobs:
           echo "IMAGE_TAG=$(echo ${{ github.event.inputs.commit_sha }})"
           echo "$IMAGE_TAG"
           echo $COMMIT_SHA
+  job4:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first step
+        run: |-
+          apt install update
+          apt install telnet -y && apt install ansible -y
+    
         
       
   
