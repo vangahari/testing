@@ -34,6 +34,14 @@ jobs:
     steps:
       - name: first step
         run: echo ${{ github.event.inputs.commit_sha }}
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first step
+        run: |-
+          echo "IMAGE_TAG=(echo ${{ github.event.inputs.commit_sha }})"
+          echo "$IMAGE_TAG"
+        
       
   
 
