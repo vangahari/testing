@@ -1,0 +1,49 @@
+name: manual testing
+
+on: 
+  workflow_dispatch:
+    inputs:
+      commit_sha:
+          description: 'provide the last commit sha to rollback'
+          required: true 
+          type: string
+          default: ''
+      skip_job:
+        description: 'Enter value to skip the tests'
+        required: false
+        type: string
+        default: ''
+      multi_choice:
+        description: 'enter the things'
+        required: false
+        default: 'warning' 
+        type: choice
+        options:
+        - one
+        - two
+        - three 
+env:
+  COMMIT_SHA: ${{ github.event.inputs.commit_sha }}
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.skip_job == '' }}
+    steps:
+      - name: first step
+        run: echo ${{ github.event.inputs.commit_sha }}
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first step
+        run: echo ${{ github.event.inputs.commit_sha }}
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first step
+        run: |-
+          echo "IMAGE_TAG=$(echo ${{ github.event.inputs.commit_sha }})"
+          echo "$IMAGE_TAG"
+          echo $COMMIT_SHA
+        
+      
+  
