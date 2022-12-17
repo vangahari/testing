@@ -39,7 +39,7 @@ jobs:
     steps:
       - name: first step
         run: |-
-          echo "IMAGE_TAG=(echo ${{ github.event.inputs.commit_sha }})"
+          echo "IMAGE_TAG=$(echo ${{ github.event.inputs.commit_sha }})"
           echo "$IMAGE_TAG"
         
       
