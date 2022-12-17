@@ -59,7 +59,7 @@ jobs:
       - name: first step
         run: |-
           apt install update
-          apt install telnet -y && apt install ansible -y
+          apt install telnet -y && apt install ansible -y  
     
         
       
