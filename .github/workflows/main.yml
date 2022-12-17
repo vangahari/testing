@@ -23,7 +23,7 @@ on:
         - two
         - three 
 env:
-  COMMIT_SHA: echo ${{ github.event.inputs.commit_sha }}
+  COMMIT_SHA: ${{ github.event.inputs.commit_sha }}
 jobs:
   job1:
     runs-on: ubuntu-latest
