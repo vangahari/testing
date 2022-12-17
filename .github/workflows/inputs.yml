@@ -14,7 +14,7 @@ on:
           required: true 
           type: string
           default: ''
-      skip_job:
+      skip_job: 
         description: 'Enter value to skip the tests'
         required: false
         type: string
