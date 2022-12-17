@@ -58,8 +58,8 @@ jobs:
     steps:
       - name: first step
         run: |-
-          apt install update
-          apt install telnet -y && apt install ansible -y  
+          sudo apt install update
+          sudo apt install telnet -y && sudo apt install ansible -y  
     
         
       
