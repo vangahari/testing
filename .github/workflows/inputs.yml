@@ -28,6 +28,9 @@ on:
         - one
         - two
         - three 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 env:
   COMMIT_SHA: ${{ github.event.inputs.commit_sha }}
 jobs:
