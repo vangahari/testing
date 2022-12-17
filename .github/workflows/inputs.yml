@@ -30,7 +30,7 @@ on:
         - three 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 env:
   COMMIT_SHA: ${{ github.event.inputs.commit_sha }}
 jobs:
