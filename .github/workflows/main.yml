@@ -1,6 +1,12 @@
 name: manual testing
 
 on: 
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
   workflow_dispatch:
     inputs:
       commit_sha:
@@ -44,6 +50,7 @@ jobs:
           echo "IMAGE_TAG=$(echo ${{ github.event.inputs.commit_sha }})"
           echo "$IMAGE_TAG"
           echo $COMMIT_SHA
+          sleep 200
         
       
   
