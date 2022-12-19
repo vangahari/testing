@@ -28,7 +28,10 @@ on:
         options:
         - one
         - two
-        - three 
+        - three
+      checkbox:
+        type: boolean
+        description: Include  emojis
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
