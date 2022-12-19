@@ -25,7 +25,7 @@ on:
       checkbox:
         type: boolean
         description: Include  emojis
-        required: false
+        required: true
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
