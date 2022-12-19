@@ -1,4 +1,4 @@
-name: manual testing
+name: inputs testing
 
 on: 
   workflow_dispatch:
