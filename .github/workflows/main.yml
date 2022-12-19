@@ -24,7 +24,7 @@ on:
         - three
       checkbox:
         type: boolean
-        description: Include  emojis
+        description: 'Select to deploy job'
         required: true
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
