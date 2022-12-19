@@ -67,6 +67,13 @@ jobs:
           echo "IMAGE_TAG=$(echo ${{ github.event.inputs.commit_sha }})"
           echo "$IMAGE_TAG"
           echo $COMMIT_SHA
+  job5:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.checkbox == 'true' }}
+    steps:
+      - name: first step
+        run: |-
+          echo ${{ github.event.inputs.multi-choice }}
       
   
 
