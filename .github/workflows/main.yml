@@ -26,6 +26,13 @@ on:
         type: boolean
         description: 'Select to deploy job'
         required: true
+      multi-choice:
+        type: multi-choice
+        description: select packages
+        options: 
+        - go-service1
+        - go-service2
+        - py-service1
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
