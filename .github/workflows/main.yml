@@ -1,13 +1,6 @@
 name: manual testing
 
 on: 
-  push:
-  pull_request:
-    types:
-      - opened
-      - reopened
-      - synchronize
-      - closed
   workflow_dispatch:
     inputs:
       commit_sha:
@@ -32,6 +25,7 @@ on:
       checkbox:
         type: boolean
         description: Include  emojis
+        required: false
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
