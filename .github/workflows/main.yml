@@ -69,7 +69,6 @@ jobs:
           echo $COMMIT_SHA
   job5:
     runs-on: ubuntu-latest
-    if: ${{ github.event.inputs.checkbox == 'true' }}
     steps:
       - name: first step
         run: |-
