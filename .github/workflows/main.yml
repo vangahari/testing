@@ -79,16 +79,10 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
+         fetch-depth: 10
          ref: ${{ github.event.inputs.commit_sha }}
-#       - name: checkout to commit 
-#         run: |-
-#           git checkout main
-#           git checkout ${{ github.event.inputs.commit_sha }} 
       - name: print commit sha
         run: |-
-          env: 
-          echo "GITHUB_SHA=${{ github.event.inputs.commit_sha }}" >> GITHUB_ENV
-          echo $GITHUB_ENV
           echo ${GITHUB_SHA}
           echo ${GITHUB_REF#refs/heads/}
       
