@@ -81,8 +81,8 @@ jobs:
         with:
          fetch-depth: 10
          ref: ${{ github.event.inputs.commit_sha }}
-      - name: checkout to sha
-        run: git reset --hard ${{ github.event.inputs.commit_sha }}
+#       - name: checkout to sha
+#         run: git reset --hard ${{ github.event.inputs.commit_sha }}
       - name: print commit sha
         run: |-
           echo "GITHUB_SHA=$(echo ${{ github.event.inputs.commit_sha }})" >> $GITHUB_ENV
