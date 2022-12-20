@@ -86,7 +86,7 @@ jobs:
       - name: print commit sha
         run: |-
           echo ${GITHUB_SHA}
-          echo ${GITHUB_REF#refs/heads/}
+          echo ${GITHUB_REF#refs/heads/} ## add comments
       
   
 
