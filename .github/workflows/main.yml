@@ -78,10 +78,12 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-      - name: checkout to commit 
-        run: |-
-          git checkout main
-          git checkout ${{ github.event.inputs.commit_sha }} 
+        with:
+         ref: ${{ github.event.inputs.commit_sha }}
+#       - name: checkout to commit 
+#         run: |-
+#           git checkout main
+#           git checkout ${{ github.event.inputs.commit_sha }} 
       - name: print commit sha
         run: |-
           echo ${GITHUB_SHA}
