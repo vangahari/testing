@@ -87,6 +87,9 @@ jobs:
         run: |-
           echo ${GITHUB_SHA}
           echo ${GITHUB_REF#refs/heads/} ## add comments, one more comment
+          ls -lrt 
+          pwd
+          cat .github/workflows/main.yml
       
   
 
