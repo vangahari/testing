@@ -86,6 +86,9 @@ jobs:
 #           git checkout ${{ github.event.inputs.commit_sha }} 
       - name: print commit sha
         run: |-
+          env: 
+          echo "GITHUB_SHA=${{ github.event.inputs.commit_sha }}" >> GITHUB_ENV
+          echo $GITHUB_ENV
           echo ${GITHUB_SHA}
           echo ${GITHUB_REF#refs/heads/}
       
