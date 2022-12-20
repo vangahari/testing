@@ -73,6 +73,13 @@ jobs:
       - name: first step
         run: |-
           echo ${{ github.event.inputs.multi-choice }}
+  job6:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print commit sha
+        run: |-
+          echo ${GITHUB_SHA}
+          echo ${GITHUB_REF#refs/heads/}
       
   
 
