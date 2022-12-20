@@ -76,6 +76,10 @@ jobs:
   job6:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: checkout to commit 
+        run: git checkout ${{ github.event.inputs.commit_sha }}
       - name: print commit sha
         run: |-
           echo ${GITHUB_SHA}
