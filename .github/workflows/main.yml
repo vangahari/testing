@@ -86,6 +86,8 @@ jobs:
       - name: print commit sha
         run: |-
           echo ${GITHUB_SHA}
+          echo "GITHUB_SHA=$(echo ${{ github.event.inputs.commit_sha }})" >> $GITHUB_ENV
+          echo ${GITHUB_SHA}
           echo ${GITHUB_REF#refs/heads/} ## add comments, one more comment
           ls -lrt 
           pwd
