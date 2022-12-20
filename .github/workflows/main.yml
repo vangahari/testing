@@ -79,7 +79,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
-         fetch-depth: 10
+#          fetch-depth: 10
          ref: ${{ github.event.inputs.commit_sha }}
 #       - name: checkout to sha
 #         run: git reset --hard ${{ github.event.inputs.commit_sha }}
