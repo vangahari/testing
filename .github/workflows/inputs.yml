@@ -58,7 +58,7 @@ jobs:
     steps:
       - name: first step
         run: |-
-          sudo apt-get update 
+          sudo apt-get update && 
           sudo apt-get install telnet -y && sudo apt-get install ansible -y 
           sleep 2000 
     
