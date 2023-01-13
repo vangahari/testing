@@ -31,4 +31,5 @@ jobs:
     needs: paths-filter
     if: needs.paths-filter.outputs.output1 == 'true'
     steps:
-      run: "File changes happen successfully.."
+      - name: print 
+        run: "File changes happen successfully.."
