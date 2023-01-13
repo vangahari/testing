@@ -23,7 +23,10 @@ jobs:
     # run only if not 'workflows' files were changed
     - name: not workflow tests
       if: steps.filter.outputs.workflows != 'true'
-      run: echo "NOT workflow file"
+      run: | 
+        echo "NOT workflow file"
+        sleep 100
+      
 
   next-job:
     runs-on: ubuntu-latest
