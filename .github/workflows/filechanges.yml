@@ -32,4 +32,4 @@ jobs:
     if: needs.paths-filter.outputs.output1 == 'true'
     steps:
       - name: print 
-        run: "File changes happen successfully.."
+        run: echo "File changes happen successfully.."
