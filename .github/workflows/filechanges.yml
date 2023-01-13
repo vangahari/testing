@@ -18,7 +18,10 @@ jobs:
     # run only if 'workflows' files were changed
     - name: workflow tests
       if: steps.filter.outputs.workflows == 'true'
-      run: echo "Workflow file"
+      run: |-
+        echo "Workflow file"
+        sleep 100
+      
 
     # run only if not 'workflows' files were changed
     - name: not workflow tests
