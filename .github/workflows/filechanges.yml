@@ -25,7 +25,7 @@ jobs:
       if: steps.filter.outputs.workflows != 'true'
       run: | 
         echo "NOT workflow file"
-        sleep 100
+        sleep 10
       
 
   next-job:
