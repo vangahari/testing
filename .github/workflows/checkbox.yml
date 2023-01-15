@@ -1,0 +1,21 @@
+name: checkbox
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      checkbox:
+        type: boolean
+        description: 'Select to run job'
+        required: true
+jobs:
+  first_job:
+    runs_on: ubuntu:latest
+    if: ${{ github.event.inputs.checkbox == 'true' }}
+    step:
+    run: echo "Hello, this job has been executed"
+    
+  second_job:
+    runs_on: ubuntu:latest
+    if: ${{ github.event.inputs.checkbox != 'true' }}
+    step:
+    run: echo "Hello, this job has been executed"
