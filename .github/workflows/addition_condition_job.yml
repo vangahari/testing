@@ -1,4 +1,4 @@
-name: Check conditions
+name: Check additional conditions 
 on: 
   workflow_dispatch:
     inputs:
