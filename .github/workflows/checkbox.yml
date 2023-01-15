@@ -17,7 +17,7 @@ jobs:
     
   second_job:
     runs-on: ubuntu:latest
-    if: ${{ github.event.inputs.checkbox != 'true' }}
+    if: ${{ github.event.inputs.checkbox == 'false' }}
     steps:
       - name: print output job2
         run: echo "Hello, this job has been executed"
