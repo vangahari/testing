@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: print job1 output 
         run: |-
-          echokj "Hey, this is job1 output"
+          echo "Hey, this is job1 output"
   job_two:
     runs-on: ubuntu-latest
     if: ${{ github.event.inputs.job2_input == 'true' }}
