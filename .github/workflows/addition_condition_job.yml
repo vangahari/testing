@@ -28,7 +28,7 @@ jobs:
     steps:
       - name: print job2 output 
         run: |-
-          echo "Hey, this is job2 output"
+          echojh "Hey, this is job2 output"
   job_three:
     runs-on: ubuntu-latest
     if: ${{ github.event.inputs.job3_input == 'true' }}
