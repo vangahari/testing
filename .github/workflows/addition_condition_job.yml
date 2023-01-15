@@ -70,8 +70,8 @@ jobs:
           
   depend_job_two:
     runs-on: ubuntu-latest
-    needs: [test_passed, job_two]
-    if: always() && needs.test_passed.outputs.all_jobs_output && needs.job_two.result == 'success'
+    needs: [test_passed, job_one, job_two]
+    if: always() && needs.test_passed.outputs.all_jobs_output && needs.job_two.result == 'success' && needs.job_one.result == 'success'
     steps:
       - name: print job2 output 
         run: |-
@@ -79,8 +79,8 @@ jobs:
  
   depend_job_three:
     runs-on: ubuntu-latest
-    needs: [test_passed, job_three]
-    if: always() && needs.test_passed.outputs.all_jobs_output && needs.job_three.result == 'success'
+    needs: [test_passed, job_two, job_three]
+    if: always() && needs.test_passed.outputs.all_jobs_output && needs.job_three.result == 'success' && needs.job_two.result == 'success'
     steps:
       - name: print job3 output 
         run: |-
