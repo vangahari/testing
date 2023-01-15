@@ -10,7 +10,7 @@ on:
         type: boolean
         description: 'Select to deploy job two'
         required: true
-      job2_input:
+      job3_input:
         type: boolean
         description: 'Select to deploy job three'
         required: true
