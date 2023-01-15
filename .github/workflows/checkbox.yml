@@ -12,10 +12,12 @@ jobs:
     runs_on: ubuntu:latest
     if: ${{ github.event.inputs.checkbox == 'true' }}
     step:
-    run: echo "Hello, this job has been executed"
+    - name: print output job1
+      run: echo "Hello, this job has been executed"
     
   second_job:
     runs_on: ubuntu:latest
     if: ${{ github.event.inputs.checkbox != 'true' }}
-    step:
-    run: echo "Hello, this job has been executed"
+    steps:
+     - name: print output job2
+       run: echo "Hello, this job has been executed"
