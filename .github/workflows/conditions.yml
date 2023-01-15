@@ -44,7 +44,7 @@ jobs:
     steps:
       - name: print job1 output 
         run: |-
-          echo "Hey, this is job1 output"
+          echolk "Hey, this is job1 output"
           
   depend_job_two:
     runs-on: ubuntu-latest
