@@ -46,14 +46,14 @@ jobs:
         run: |-
           echo "Hey, this is job1 output"
           
-  depend_job_two:
-    runs-on: ubuntu-latest
-    needs: job_two
-    if: ${{ github.event.inputs.job2_input == 'true' }}
-    steps:
-      - name: print job2 output 
-        run: |-
-          echo "Hey, this is job2 output"
+#   depend_job_two:
+#     runs-on: ubuntu-latest
+#     needs: job_two
+#     if: ${{ github.event.inputs.job2_input == 'true' }}
+#     steps:
+#       - name: print job2 output 
+#         run: |-
+#           echo "Hey, this is job2 output"
           
   depend_job_two_one_more:
     runs-on: ubuntu-latest
