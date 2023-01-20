@@ -1,5 +1,6 @@
 name: Check from conditions branch 
 on: 
+  pull_request:
   push:
   workflow_dispatch:
     inputs:
