@@ -1,4 +1,4 @@
-name: Check additional conditions 
+name: Check from conditions branch 
 on: 
   push:
   workflow_dispatch:
