@@ -1,6 +1,6 @@
 name: Check additional conditions 
 on: 
-  push:
+#   push:
   workflow_dispatch:
     inputs:
       job1_input:
