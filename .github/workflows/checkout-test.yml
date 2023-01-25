@@ -27,4 +27,5 @@ jobs:
         run: |-
           git branch
           git log
+          echo $GIT_BRANCH
     
