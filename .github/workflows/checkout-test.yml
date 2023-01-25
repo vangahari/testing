@@ -14,11 +14,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
+        id: checkout_job
         uses: actions/checkout@v3
         with:
           ref: ${{ github.event.inputs.commit_sha }}
+          
+      - name: Get branch name
+        id: get_branch_name
+        run: echo "GIT_BRANCH=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_ENV
+      
       - name: check git log 
         run: |-
-          git branch 
+          git branch
           git log
     
