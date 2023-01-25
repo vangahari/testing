@@ -24,7 +24,7 @@ jobs:
       
       - name: check git log 
         run: |-
-          git branch
+          git rev-parse --abbrev-ref HEAD
           git log
           echo $GIT_BRANCH
     
