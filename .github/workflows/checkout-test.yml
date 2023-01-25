@@ -1,7 +1,6 @@
 name: git checkout test
 
 on: 
-  push:
   workflow_dispatch:
     inputs:
       commit_sha:
